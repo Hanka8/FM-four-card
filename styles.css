@@ -1,0 +1,135 @@
+:root {
+  --red: hsl(0, 78%, 62%);
+  --cyan: hsl(180, 62%, 55%);
+  --orange: hsl(34, 97%, 64%);
+  --blue: hsl(212, 86%, 64%);
+  --gray: hsl(234, 12%, 34%);
+  --grayish: hsl(229, 6%, 66%);
+  --white: hsl(0, 0%, 98%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  color: var(--gray);
+}
+
+body {
+  background-color: var(--white);
+}
+
+/* ######## HEADERS ######## */
+header {
+  text-align: center;
+  margin: 3.5% auto;
+}
+
+h1 {
+  font-weight: 600;
+  font-size: 2rem;
+}
+
+h2 {
+  font-weight: 200;
+  font-size: 2rem;
+}
+
+h3 {
+  font-weight: 400;
+  opacity: 0.6;
+  width: 38%;
+  display: inline-block;
+  margin: 1% auto auto auto;
+}
+
+/* ######### CARDS ########## */
+.container {
+  width: 90%;
+  margin: auto 3% 15% 7%;
+  display: grid;
+  grid-template-columns: repeat(9, 8%);
+  grid-template-rows: repeat(9, 6.5);
+  column-gap: 3%;
+  row-gap: 5%;
+}
+
+.card {
+  border-radius: 10px;
+  filter: drop-shadow(0 5px 5px var(--grayish));
+  padding: 10% 5%;
+}
+
+.first-card {
+  background: linear-gradient(to bottom, var(--cyan) 2%, white 0%);
+  grid-column: 1/4;
+  grid-row: 4/8;
+}
+
+.second-card {
+  background: linear-gradient(to bottom, var(--red) 2%, white 0%);
+  grid-column: 4/7;
+  grid-row: 1/6;
+}
+
+.third-card {
+  background: linear-gradient(to bottom, var(--orange) 2%, white 0%);
+  grid-column: 4/7;
+  grid-row: 6/11;
+}
+
+.fourth-card {
+  background: linear-gradient(to bottom, var(--blue) 2%, white 0%);
+  grid-column: 7/10;
+  grid-row: 4/8;
+}
+
+.img-flex {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+h4 {
+  font-size: 1.5rem;
+  padding-left: 3%;
+  padding-right: 3%;
+}
+
+p {
+  opacity: 0.8;
+  padding: 4% 3% 16% 3%;
+}
+
+@media (max-width:450px) {
+  header {
+    padding: 15% 2% 10% 2%;
+  }
+  h3 {
+    width: 90%;
+    margin-top: 5%;
+  }
+  .container {
+    margin: auto 0% 15% 11%;
+    grid-template-columns: repeat(9, 8%);
+    grid-template-rows: repeat(17, 6.5);
+  }
+  .first-card {
+    grid-column: 1/9;
+    grid-row: 1/5;
+  }
+  .second-card {
+    grid-column: 1/9;
+    grid-row: 5/9;
+  }
+  .third-card {
+    grid-column: 1/9;
+    grid-row: 9/13;
+  }
+  .fourth-card {
+    grid-column: 1/9;
+    grid-row: 13/17;
+    margin-bottom: 10%;
+  }
+}
